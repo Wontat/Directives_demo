@@ -1,0 +1,57 @@
+<!-- <hello name="{{ name }}"></hello> -->
+<h1>
+  {{ appName }}
+</h1>
+
+<input type="text" [value]="clientName" />
+
+<p [style.color]="myColor">A color is applied in this message.</p>
+
+<p [class]="appliedCSSClass">Sample</p>
+
+<p [class.blue]="notappliedCSSClass">
+  It shows the color if it is true of false.
+</p>
+
+<!-- Two-way data binding -->
+<input [(ngModel)]="myName" placeholder="Enter your name" />
+<p>Hello, {{ myName }}!</p>
+
+<!-- Event Binding -->
+
+<button (click)="onButtonClick()" class="hover">Pindutin</button>
+
+<p *ngIf="message">{{ message }}</p>
+<button (click)="showAlert()" class="hover">Pindutin</button>
+
+<!-- ngIf Directive -->
+<ng-template [ngIf]="showElement">
+  <p>This element is displayed if showElement is true</p>
+</ng-template>
+
+<!-- ngFor Directive -->
+
+<ul>
+  <li *ngFor="let item of items">{{ item }}</li>
+</ul>
+
+<!-- ngSwitch Directive -->
+
+<ng-container [ngSwitch]="selectedOption">
+  <p *ngSwitchCase="1">Option 1 selected</p>
+  <p *ngSwitchCase="2">Option 2 selected</p>
+  <p *ngSwitchDefault>No option is selected</p>
+</ng-container>
+
+<!-- ngStyle Directive -->
+
+<p [ngStyle]="{ color: color }">Dynamically Colored</p>
+
+<!-- ngClass Directive -->
+
+<p [ngClass]="{ bold: isBold, italic: isItalic }">Dynamically Styled</p>
+
+<!-- ngModel Directive -->
+
+<input [(ngModel)]="name" />
+<p>Hello {{ name }}!</p>

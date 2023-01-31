@@ -1,0 +1,18 @@
+p {
+  font-family: Lato;
+}
+
+.green {
+  color: green;
+}
+
+.blue {
+  color: blue;
+}
+
+.hover {
+  transition: transform 0.3s;
+}
+.hover:hover {
+  transform: scale(1.3);
+}
